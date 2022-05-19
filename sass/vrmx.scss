@@ -1,0 +1,59 @@
+
+/* VARIABLES */
+$principal-layout:white;
+
+/* KEYFRAMES */
+
+/* APARICION DERECHA */
+@keyframes appear-r {
+    0%{transform: translateX(5000px);}
+    100%{}
+}
+/* APARICION DERECHA */
+
+
+
+/* APARICION IZQUIERDA */
+@keyframes appear-l {
+    0%{transform: translateX(-5000px);}
+    100%{}
+}
+/* APARICION IZQUIERDA */
+
+
+
+
+/* APARICION ARRIBA */
+@keyframes appear-u {
+    0%{transform: translateY(-5000px);}
+    100%{}
+}
+/* APARICION ARRIBA */
+
+
+
+
+
+/* APARICION ABAJO */
+@keyframes appear-d {
+    0%{transform: translateY(5000px);}
+    100%{}
+}
+/* APARICION ABAJO */
+
+
+/* MIXINS */
+@mixin button{
+    font-size:24px;
+    padding:8px;
+    color:$principal-layout;
+    text-decoration: none;
+    transition: 1s;
+    margin:10px;
+    border-radius:10px;
+    &:hover{
+        background-color: white;
+        color:black;
+        transition: 1s;
+    }
+}
