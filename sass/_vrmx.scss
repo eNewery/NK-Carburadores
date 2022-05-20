@@ -39,8 +39,16 @@ $principal-layout:white;
     0%{transform: translateY(5000px);}
     100%{}
 }
+
 /* APARICION ABAJO */
 
+/* SCALE */
+@keyframes scale {
+    0%{scale:1;}
+    50%{scale:7;}
+    100%{scale:1}
+}
+/* SCALE */
 
 /* MIXINS */
 @mixin button{

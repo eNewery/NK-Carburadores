@@ -1,13 +1,18 @@
 /* IMPORT */
 @import "vrmx";
+@import "media";
 
 /* RESET CSS */
 * {
+    overflow: hidden;
   margin: 0;
   padding: 0;
 }
 
 /* GRID AREAS */
+.header__nav{
+grid-area:hn;
+}
 header {
   grid-area: h;
 }
@@ -22,7 +27,6 @@ footer {
 /* HTML BODY */
 html,
 body {
-  overflow: hidden;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   width: 100%;
   height: 100%;
@@ -41,6 +45,8 @@ header {
   justify-content: space-between;
   align-items: center;
   .header__logo {
+      padding:2px;
+      border-radius:5px;
     a {
       @include button;
     }
@@ -52,6 +58,7 @@ header {
       list-style: none;
       gap: 100px;
       li {
+          padding: 6px;
         a {
           @include button;
         }
@@ -66,6 +73,7 @@ main {
   justify-content: center;
   align-items: center;
   h1 {
+      font-weight: 200;
     animation-name: appear-r;
     animation-duration: 1s;
     font-size: 42px;
@@ -114,16 +122,16 @@ footer {
     display: flex;
     gap: 100px;
     .card1 {
-      animation-name: appear-r;
+      animation-name: appear-d;
       animation-duration: 2s;
     }
     .card2 {
-      animation-name: appear-r;
-      animation-duration: 2.5s;
+      animation-name: appear-d;
+      animation-duration: 2s;
     }
     .card3 {
-      animation-name: appear-r;
-      animation-duration: 2.8s;
+      animation-name: appear-d;
+      animation-duration: 2s;
     }
     .card {
       height: 320px;
@@ -150,7 +158,7 @@ footer {
 /* CONTACTO */
 .main-contact {
   display: grid;
-  grid-template-columns: 48.1% 51.9%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
   grid-template-areas: "left right";
 }
@@ -178,7 +186,7 @@ footer {
         flex-direction: column;
         justify-content: center;
 align-items: center;
-cursor:pointer;
+
     }
     .contenido {
         transition: all 1s ease;
@@ -187,10 +195,19 @@ padding:0em;
 overflow: hidden;
     }
     .h2 {
+        cursor:pointer;
       margin: 15px;
       font-weight: 300;
       font-size: 32px;
       color: white;
+      padding:6px;
+      border-radius:10px;
+      transition: 1s;
+      &:hover{
+        background-color: white;
+        color:black;
+        transition: 1s;
+    }
     }
   }
 }
@@ -228,25 +245,28 @@ overflow: hidden;
       color: white;
     }
   }
+  .div-button{
+display:flex;
+width: 73%;
+justify-content: center;
+
   button.botonform {
     background-color: rgb(16, 16, 16);
     padding: 16px;
     border: 0px;
     color: white;
     width: 420px;
-    transform: translateX(10px);
     transition: 1s;
     border: 1px solid black;
     font-size: 16px;
+    
     &:hover {
       border: 1px solid white;
       cursor: pointer;
       transition: 1s;
-      &:active{
-          background-color: rgb(66, 66, 66);
-      }
     }
   }
+}
 }
 /* CONTACTO */
 
@@ -257,12 +277,47 @@ overflow: hidden;
     width: 100%;
     display:grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows:1fr;
-    grid-template-areas:"navprod right-p";
+    grid-template-rows:100% 90%;
+    grid-template-areas:"navprod right-p" "down-s down-s";
     .right-products{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100%;
         width: 100%;
         grid-area:right-p;
+        gap:100px;
+        animation-name: appear-r;
+        animation-duration: 2s;
+        .comm{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+background-color: rgb(8, 8, 8);
+padding:16px;
+border-radius:10px;
+        }
+        .viewprod{
+          font-weight: 200;
+          width: 100%;
+text-decoration: none;
+color:white;
+font-size: 24px;
+transition: 1s;
+border:1px solid rgb(8, 8, 8);
+padding:2px;
+border-radius:5px;
+text-align: center;
+&:hover{
+color:white;
+border:1px solid white;
+}
+        }
+        h2{
+            color:white;
+            font-weight: 300;
+        }
     }
 .nav-products{
     animation-name:appear-l;
@@ -285,7 +340,8 @@ nav{
         height: 100%;
         display:flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap:25px;
         align-items: center;
         li{
             transition: 1s;
@@ -298,6 +354,7 @@ nav{
                 transform: translateX(10px);
             }
             a{
+              font-weight: 200;
                 width: 100%;
 text-decoration: none;
 color:white;
@@ -310,5 +367,85 @@ transition: 1s;
         }
     }
 }
+}
+}
+/* PRODUCTS CATH */
+.prod-cath{
+  width: 100%;
+  height: 100%;
+  display:grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas:"cathtitle" "cathgall";
+
+}
+.cath-title{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+grid-area:cathtitle;
+text-align:center;
+.navback{
+  padding:10px;
+
+a{
+  text-decoration: none;
+  margin:10px;
+  padding: 6px;
+  border: 0px;
+  border-radius: 5px;
+  color: white;
+  transition: 1s;
+  border: 1px solid black;
+  font-size: 16px;
+  background-color: rgb(8, 8, 8);
+  &:hover {
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 1s;
+  }
+}
+}
+  h1{
+    padding:0;
+    font-size: 24px;
+  }
+}
+.cath-gall{
+display:flex;
+justify-content: center;
+  grid-template-rows: 50% 50%;
+  flex-wrap: wrap;
+grid-area:cathgall;
+gap:40px;
+.card-pd{
+  padding:10px;
+  animation-name:appear-r;
+  animation-duration: 3s;
+  display:flex;
+  flex-direction: column;
+  background-color: rgb(8, 8,8 );
+  h2{
+    color:$principal-layout;
+    font-weight: 100;
+    text-align: center;
+  }
+button{
+    background-color: rgb(16, 16, 16);
+    padding: 16px;
+    border: 0px;
+    color: white;
+    transition: 1s;
+    border: 1px solid rgb(8, 8, 8);
+    font-size: 16px;
+    &:hover {
+      border: 1px solid white;
+      cursor: pointer;
+      transition: 1s;
+    }
+}
+
 }
 }
