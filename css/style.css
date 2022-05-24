@@ -43,13 +43,46 @@
 }
 /* SCALE */
 /* MIXINS */
+/* RESET CSS */
 * {
+  text-align: center;
   margin: 0;
   padding: 0;
+  color: white;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 200;
+}
+
+body, html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: black;
+}
+
+/* NAV HEADER */
+.nav-products ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.nav-products ul .products-item {
+  transition: 1s;
+  padding: 10px;
+  border-radius: 10px;
+}
+.nav-products ul .products-item:hover {
+  transition: 1s;
+  background-color: white;
+  color: black;
 }
 
 .main-header {
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,21 +91,18 @@
 }
 
 .main-logo {
-  color: white;
-  font-size: 24px;
-  font-weight: 100;
+  font-size: 32px;
   text-decoration: none;
-  border-radius: 5px;
-  padding: 5px;
 }
 .main-logo strong {
-  padding: 5px;
   transition: 1s;
-  border-radius: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
 }
 .main-logo strong:hover {
-  color: black;
   background-color: white;
+  color: black;
   transition: 1s;
 }
 
@@ -80,7 +110,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   margin-left: -100%;
   transition: all 0.2s linear;
@@ -93,30 +123,24 @@
 }
 
 .nav-links {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: space-around;
-  margin: 5px;
+  justify-content: space-evenly;
 }
 
 .link-item {
-  margin: 20px;
+  margin-top: 2rem;
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 300;
   position: relative;
-  font-size: 24px;
-  padding: 8px;
-  color: white;
-  text-decoration: none;
   transition: 1s;
-  margin: 10px;
+  padding: 10px;
   border-radius: 10px;
-  font-weight: 100;
 }
 .link-item:hover {
   background-color: white;
@@ -177,7 +201,207 @@
   display: none;
 }
 
+/* MAIN INDEX */
+.main-index {
+  animation-name: appear-l;
+  animation-duration: 1s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-index .home {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  transition: 1s;
+}
+.main-index .home:hover {
+  padding: 10px 30px;
+  transition: 1s;
+}
+
+/* MAIN PRODUCTS */
+.main-products {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.main-products .right-products {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.main-products .right-products .viewprod {
+  border: 1px solid rgb(82, 82, 82);
+  border-radius: 5px;
+  transition: 0.8s;
+}
+.main-products .right-products .viewprod:hover {
+  background-color: white;
+  color: rgb(8, 8, 8);
+  transition: 0.8s;
+}
+.main-products .right-products .comm {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(8, 8, 8);
+  padding: 20px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  position: relative;
+  clear: both;
+  justify-content: center;
+  align-items: end;
+  margin-top: 0px;
+  padding-top: 0px;
+  overflow: visible;
+}
+
+/* MAIN ABOUT */
+.about {
+  display: flex;
+  flex-direction: column;
+}
+.about h2 {
+  align-self: center;
+  justify-self: start;
+}
+.about .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  margin: 10px;
+}
+.about .cards .card {
+  border: 1px solid rgb(8, 8, 8);
+  padding: 30px;
+  background-color: rgb(8, 8, 8);
+  border-radius: 10px;
+}
+.about .cards .card p {
+  font-size: 12px;
+}
+
+/* ACORDEON */
+.acordeon {
+  width: 90%;
+  max-width: 20rem;
+  padding: 2rem;
+}
+
+.acordeon .bloque {
+  margin: 0 0 1rem;
+  padding: 1rem;
+}
+
+.acordeon .h2 {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.acordeon .contenido {
+  height: 0;
+  padding: 0rem;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.acordeon .bloque.activo .contenido {
+  height: 4rem;
+}
+
+/* ACORDEON */
+/* MAIN CONTACT */
+.goformbutton {
+  background-color: rgb(8, 8, 8);
+  padding: 10px;
+  font-size: 24px;
+  display: inline;
+  transition: 1s;
+}
+.goformbutton:hover {
+  border: 1px solid white;
+  transition: 1s;
+}
+
+.main-contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-contact .contact-section-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: appear-l;
+  animation-duration: 1s;
+}
+.main-contact .contact-section-right {
+  transform: translateY(40px);
+}
+.main-contact .contact-section-right .div-button {
+  margin: 10px;
+}
+.main-contact .contact-section-right .div-button .botonform {
+  margin: 5px;
+  background-color: rgb(8, 8, 8);
+  padding: 10px;
+  font-size: 24px;
+  border: 1px solid rgb(8, 8, 8);
+  transition: 1s;
+}
+.main-contact .contact-section-right .div-button .botonform:hover {
+  transition: 1s;
+  border: 1px solid white;
+}
+.main-contact section {
+  margin: 100px;
+}
+.main-contact section .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.main-contact section .form .e-mail {
+  display: flex;
+}
+.main-contact section .form input {
+  width: 300px;
+  background-color: rgb(8, 8, 8);
+  border: 0;
+  padding: 10px;
+}
+
+/* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
+  /* MAIN CONTACT */
+  .goformbutton {
+    display: none;
+  }
+
+  .main-contact {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* MAIN CONTACT */
+  /* MAIN PRODUCTS */
   .button-menu {
     display: none;
   }
@@ -199,7 +423,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    background: rgb(0, 0, 0);
+    background-color: black;
   }
 
   .link-item {
@@ -207,476 +431,6 @@
     margin-top: 0;
     margin-right: 2rem;
   }
-}
-/* RESET CSS */
-* {
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-/* GRID AREAS */
-.header__nav {
-  grid-area: hn;
-}
-
-header {
-  grid-area: h;
-}
-
-main {
-  grid-area: m;
-}
-
-footer {
-  grid-area: f;
-}
-
-/* GRID AREAS */
-/* HTML BODY */
-html,
-body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-}
-
-.container {
-  display: grid;
-  grid-template-rows: 10% 80% 10%;
-  grid-template-areas: "h" "m" "f";
-}
-
-/* HTML BODY */
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* NAV */
-}
-header .header__logo {
-  padding: 2px;
-  border-radius: 5px;
-}
-header .header__logo a {
-  font-size: 24px;
-  padding: 8px;
-  color: white;
-  text-decoration: none;
-  transition: 1s;
-  margin: 10px;
-  border-radius: 10px;
-}
-header .header__logo a:hover {
-  background-color: white;
-  color: black;
-  transition: 1s;
-}
-header .header__nav ul {
-  display: flex;
-  list-style: none;
-  gap: 100px;
-}
-header .header__nav ul li {
-  padding: 6px;
-}
-header .header__nav ul li a {
-  font-size: 24px;
-  padding: 8px;
-  color: white;
-  text-decoration: none;
-  transition: 1s;
-  margin: 10px;
-  border-radius: 10px;
-}
-header .header__nav ul li a:hover {
-  background-color: white;
-  color: black;
-  transition: 1s;
-}
-
-/*MAIN */
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-main h1 {
-  font-weight: 200;
-  animation-name: appear-r;
-  animation-duration: 1s;
-  font-size: 42px;
-  color: white;
-}
-main a.home {
-  animation-name: appear-r;
-  animation-duration: 1s;
-  text-align: center;
-  padding: 6px;
-  border-radius: 10px;
-  margin: 25px;
-  background-color: white;
-  font-size: 32px;
-  text-decoration: none;
-  color: black;
-  width: 250px;
-  transition: 1s;
-}
-main a.home:hover {
-  padding: 20px;
-  font-size: 36px;
-  transition: 1s;
-}
-
-/* FOOTER */
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-/* PRODUCTOS */
-/* QUIENES SOMOS */
-.about {
-  justify-content: start;
-}
-.about h2 {
-  font-weight: 300;
-  color: white;
-  margin: 50px;
-  animation-name: appear-r;
-  animation-duration: 1s;
-}
-.about .cards {
-  display: flex;
-  gap: 100px;
-}
-.about .cards .card1 {
-  animation-name: appear-d;
-  animation-duration: 2s;
-}
-.about .cards .card2 {
-  animation-name: appear-d;
-  animation-duration: 2s;
-}
-.about .cards .card3 {
-  animation-name: appear-d;
-  animation-duration: 2s;
-}
-.about .cards .card {
-  height: 320px;
-  width: 250px;
-  border-radius: 10px;
-  background-color: rgb(8, 8, 8);
-  padding: 30px;
-  transition: 1s;
-  box-shadow: 1px 1px 1px 3px rgb(4, 4, 4);
-}
-.about .cards .card:hover {
-  transform: translateY(-20px);
-  transition: 1s;
-}
-.about .cards .card h2 {
-  text-align: center;
-}
-.about .cards .card p {
-  color: white;
-  text-align: center;
-}
-
-/* CONTACTO */
-.main-contact {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 1fr;
-  grid-template-areas: "left right";
-}
-
-.contact-section-left {
-  animation-name: appear-l;
-  animation-duration: 3s;
-  grid-area: left;
-  width: 100%;
-  height: 100%;
-}
-.contact-section-left .acordeon .bloque.activo .contenido {
-  height: 4em;
-  color: white;
-}
-.contact-section-left .acordeon {
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2em;
-}
-.contact-section-left .acordeon .bloque {
-  text-align: center;
-  margin: 0 0 1em;
-  padding: 0.2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.contact-section-left .acordeon .contenido {
-  transition: all 1s ease;
-  height: 0;
-  padding: 0em;
-  overflow: hidden;
-}
-.contact-section-left .acordeon .h2 {
-  cursor: pointer;
-  margin: 15px;
-  font-weight: 300;
-  font-size: 32px;
-  color: white;
-  padding: 6px;
-  border-radius: 10px;
-  transition: 1s;
-}
-.contact-section-left .acordeon .h2:hover {
-  background-color: white;
-  color: black;
-  transition: 1s;
-}
-
-.contact-section-right {
-  animation-name: appear-d;
-  animation-duration: 2s;
-  display: flex;
-  align-items: start;
-  gap: 20px;
-  flex-direction: column;
-  grid-area: right;
-  width: 100%;
-  height: 100%;
-  border-left: 1px solid rgb(8, 8, 8);
-}
-.contact-section-right h1 {
-  margin: 10px;
-  font-weight: 300;
-  font-size: 32px;
-}
-.contact-section-right #textarea {
-  height: 100px;
-}
-.contact-section-right .e-mailinput {
-  width: 180px;
-}
-.contact-section-right input {
-  border: 0;
-  background-color: rgb(8, 8, 8);
-  padding: 10px;
-  margin: 10px;
-  width: 400px;
-}
-.contact-section-right input::placeholder {
-  color: white;
-}
-.contact-section-right .div-button {
-  display: flex;
-  width: 73%;
-  justify-content: center;
-}
-.contact-section-right .div-button button.botonform {
-  background-color: rgb(16, 16, 16);
-  padding: 16px;
-  border: 0px;
-  color: white;
-  width: 420px;
-  transition: 1s;
-  border: 1px solid black;
-  font-size: 16px;
-}
-.contact-section-right .div-button button.botonform:hover {
-  border: 1px solid white;
-  cursor: pointer;
-  transition: 1s;
-}
-
-/* CONTACTO */
-/* PRODUCTS */
-.main-products {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 100% 90%;
-  grid-template-areas: "navprod right-p" "down-s down-s";
-}
-.main-products .right-products {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  grid-area: right-p;
-  gap: 100px;
-  animation-name: appear-r;
-  animation-duration: 2s;
-}
-.main-products .right-products .comm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(8, 8, 8);
-  padding: 16px;
-  border-radius: 10px;
-}
-.main-products .right-products .viewprod {
-  font-weight: 200;
-  width: 100%;
-  text-decoration: none;
-  color: white;
-  font-size: 24px;
-  transition: 1s;
-  border: 1px solid rgb(8, 8, 8);
-  padding: 2px;
-  border-radius: 5px;
-  text-align: center;
-}
-.main-products .right-products .viewprod:hover {
-  color: white;
-  border: 1px solid white;
-}
-.main-products .right-products h2 {
-  color: white;
-  font-weight: 300;
-}
-.main-products .nav-products {
-  animation-name: appear-l;
-  animation-duration: 1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
-  height: 100%;
-  width: 100%;
-  grid-area: navprod;
-}
-.main-products .nav-products nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-.main-products .nav-products nav ul {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 25px;
-  align-items: center;
-}
-.main-products .nav-products nav ul li {
-  transition: 1s;
-  padding: 6px;
-  border-radius: 10px;
-}
-.main-products .nav-products nav ul li:hover {
-  background-color: white;
-  color: black;
-  transition: 1s;
-  transform: translateX(10px);
-}
-.main-products .nav-products nav ul li a {
-  font-weight: 200;
-  width: 100%;
-  text-decoration: none;
-  color: white;
-  font-size: 24px;
-  transition: 1s;
-}
-.main-products .nav-products nav ul li a:hover {
-  color: black;
-}
-
-/* PRODUCTS CATH */
-.prod-cath {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 20% 80%;
-  grid-template-areas: "cathtitle" "cathgall";
-}
-
-.cath-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100%;
-  grid-area: cathtitle;
-  text-align: center;
-}
-.cath-title .navback {
-  padding: 10px;
-}
-.cath-title .navback a {
-  text-decoration: none;
-  margin: 10px;
-  padding: 6px;
-  border: 0px;
-  border-radius: 5px;
-  color: white;
-  transition: 1s;
-  border: 1px solid black;
-  font-size: 16px;
-  background-color: rgb(8, 8, 8);
-}
-.cath-title .navback a:hover {
-  border: 1px solid white;
-  cursor: pointer;
-  transition: 1s;
-}
-.cath-title h1 {
-  padding: 0;
-  font-size: 24px;
-}
-
-.cath-gall {
-  display: flex;
-  justify-content: center;
-  grid-template-rows: 50% 50%;
-  flex-wrap: wrap;
-  grid-area: cathgall;
-  gap: 40px;
-}
-.cath-gall .card-pd {
-  padding: 10px;
-  animation-name: appear-r;
-  animation-duration: 3s;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(8, 8, 8);
-}
-.cath-gall .card-pd h2 {
-  color: white;
-  font-weight: 100;
-  text-align: center;
-}
-.cath-gall .card-pd button {
-  background-color: rgb(16, 16, 16);
-  padding: 16px;
-  border: 0px;
-  color: white;
-  transition: 1s;
-  border: 1px solid rgb(8, 8, 8);
-  font-size: 16px;
-}
-.cath-gall .card-pd button:hover {
-  border: 1px solid white;
-  cursor: pointer;
-  transition: 1s;
 }
 
 /*# sourceMappingURL=style.css.map */

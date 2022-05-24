@@ -8,18 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NK Carburadores</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="./js/main.js" ></script>
+    <script defer src="./js/main.js" defer></script>
 </head>
 <body class="container">
-    <header>
-        <div class="header__logo"><a href="index.html">NK Carburadores</a></div>
-        <div class="header__nav"><nav><ul>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="quienes.html">Quienes somos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul></nav></div>
-    </header>
-    <main class="main-contact">
+    <header id="goup" class="main-header">
+        <a class="main-logo" href="../index.html">
+          <strong>NK Carburadores</strong>
+        </a>
+        <nav id="nav" class="main-nav">
+          <div class="nav-links">
+            <a class="link-item" href="../productos.html">Productos</a>
+            <a class="link-item" href="../quienes.html">Quienes somos</a>
+            <a class="link-item" href="../contacto.html">Contacto</a>
+          </div>
+        </nav>
+        <button id="button-menu" class="button-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+    <main class="main-contact main-index">
         <!-- CONTACT SECTION LEFT -->
         <section class="contact-section-left">
             <div class="acordeon">
@@ -34,10 +43,8 @@
         <div class="bloque">
             <h2 class="h2">Medios de pago +</h2>
             <div class="contenido">
-            <p>Mercado pago            </p>
-            <p> Transferencia bancaria            </p>
-            <p> Tarjeta de crédito o débito Mastercard o Visa.            </p>
-
+            <p>Mercado pago</p>
+            <p>Transferencia bancaria</p>
         </div>
         </div>
         <div class="bloque">
@@ -46,29 +53,31 @@
             <p>Envíos por Correo Argentino</p>
         </div>
         </div>
+        <a class="goformbutton" href="#goform">Ir al formulario</a>
     </div>
+
         </section>
 
 
                 <!-- CONTACT SECTION RIGHT -->
-        <section class="contact-section-right">
-<h1>Formulario</h1>
-<div>
+        <section id="goform" class="contact-section-right">
+<div class="form">
+            <h1>Formulario</h1>
+
 <input type="text" placeholder="Nombre"><input type="text" placeholder="Apellido">
-</div>
-<div class="e-mail">
+
+
     <input class="e-mailinput" placeholder="E-mail" type="email"><input class="e-mailinput" placeholder="Confirmar E-mail" type="email">
-</div>
-<div class="e-mail">
+
+
     <input class="e-mailinput" placeholder="Teléfono" type="email"><input class="e-mailinput" placeholder="Código postal" type="email">
-</div>
+
 <input type="text" id="textarea" placeholder="Mensaje">
 <div class="div-button">
-<button class="botonform">¡Enviar formulario!</button>
+<button class="botonform">¡Enviar formulario!</button><a href="#goup" class="botonform goformbutton">Volver arriba!</a>
+</div>
 </div>
         </section>
     </main>
-<footer>NK Carburadores | Newery</footer>
-
 </body>
 </html>
