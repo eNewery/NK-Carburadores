@@ -296,11 +296,11 @@ clear: both;
 .cards{
   display: flex;
   flex-direction: column;
-  gap:90px;
+  gap:45px;
   margin:10px;
   .card{
     border:1px solid rgb(8,8,8);  
-    padding: 30px;
+    padding: 15px;
     background-color: rgb(8,8,8);
     border-radius:10px;
   p{
@@ -344,6 +344,8 @@ clear: both;
   font-size:24px;
   display:inline;
   transition: 1s;
+  display: flex;
+  justify-content: center;
 &:hover{
   border:1px solid white;
   transition: 1s;
@@ -416,6 +418,10 @@ padding:10px;
 }
 /* MEDIA QUERIES */
 @media screen and (min-width:768px) {
+  /* ABOUT */
+
+
+
   /* MAIN CONTACT */
   .goformbutton{
   display: none;
