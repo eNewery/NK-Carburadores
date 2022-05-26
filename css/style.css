@@ -228,6 +228,30 @@ body, html {
 }
 
 /* MAIN PRODUCTS */
+.cath-title {
+  transform: translateY(50px);
+  padding: 7px;
+}
+
+.cath-gall {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.products-item {
+  font-size: 18px;
+}
+
+.prod-row .card-pd {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.prod-row .card-pd h2 {
+  align-self: center;
+}
+
 .main-products {
   width: 100%;
   height: 100%;
