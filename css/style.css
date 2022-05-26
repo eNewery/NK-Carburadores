@@ -64,21 +64,28 @@ body, html {
 }
 
 /* NAV HEADER */
+.nav-products {
+  background-color: rgb(8, 8, 8);
+}
 .nav-products ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
-.nav-products ul .products-item {
+.nav-products ul li {
+  padding: 10px;
+  border: 1px solid rgb(53, 53, 53);
+  transition: 1s;
+}
+.nav-products ul li:hover {
+  border: 1px solid white;
+  transition: 1s;
+}
+.nav-products ul li .products-item {
   transition: 1s;
   padding: 10px;
   border-radius: 10px;
-}
-.nav-products ul .products-item:hover {
-  transition: 1s;
-  background-color: white;
-  color: black;
+  font-size: 18px;
 }
 
 .main-header {
@@ -253,10 +260,6 @@ body, html {
   flex-direction: column;
   padding: 16px;
   gap: 50px;
-}
-
-.products-item {
-  font-size: 18px;
 }
 
 .prod-row .card-pd {
