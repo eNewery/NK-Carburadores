@@ -326,6 +326,10 @@ footer {
 
 /* ACORDEON */
 /* MAIN CONTACT */
+#goup {
+  margin-top: 10px;
+}
+
 .goformbutton {
   background-color: rgb(8, 8, 8);
   padding: 10px;
@@ -355,6 +359,8 @@ footer {
   transform: translateY(40px);
 }
 .main-contact .contact-section-right .div-button {
+  display: flex;
+  flex-direction: column;
   margin: 10px;
 }
 .main-contact .contact-section-right .div-button .botonform {

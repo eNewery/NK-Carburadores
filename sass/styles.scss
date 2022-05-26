@@ -277,6 +277,9 @@ clear: both;
 }
 /* ACORDEON */
 /* MAIN CONTACT */
+#goup{
+  margin-top:10px;
+}
 .goformbutton{
   background-color: rgb(8,8,8);
   padding:10px;
@@ -303,6 +306,8 @@ clear: both;
     .contact-section-right{
 transform:translateY(40px);
 .div-button{
+  display: flex;
+  flex-direction: column;
 margin:10px;
 .botonform{
   margin:5px;
