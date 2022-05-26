@@ -45,6 +45,9 @@ transition: 1s;
 }
 }
   }
+  .hc{
+    transform: translateY(-3px);
+  }
 .main-header{
   height: 70px;
   display: flex;
@@ -334,9 +337,7 @@ clear: both;
 }
 /* ACORDEON */
 /* MAIN CONTACT */
-#goup{
-  margin-top:6px;
-}
+
 .goformbutton{
   background-color: rgb(8,8,8);
   padding:10px;
