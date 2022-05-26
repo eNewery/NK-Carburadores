@@ -340,7 +340,7 @@ footer {
 .about .cards {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 10px;
   margin: 10px;
 }
 .about .cards .card {
