@@ -88,17 +88,12 @@ body, html {
   font-size: 18px;
 }
 
-.hc {
-  transform: translateY(3px);
-}
-
 .main-header {
-  height: 70px;
+  height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  padding: 0 0.4rem;
 }
 
 .main-logo {
@@ -399,7 +394,7 @@ footer {
 }
 
 .main-contact {
-  height: 93%;
+  height: 91.2%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -454,6 +449,8 @@ footer {
 /* PROD ROWS */
 .prod-cath {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 100px;
 }
