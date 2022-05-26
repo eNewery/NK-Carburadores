@@ -46,7 +46,7 @@ transition: 1s;
 }
   }
   .hc{
-    transform: translateY(-3px);
+    transform: translateY(3px);
   }
 .main-header{
   height: 70px;
@@ -418,10 +418,6 @@ padding:10px;
 }
 /* MEDIA QUERIES */
 @media screen and (min-width:768px) {
-  /* ABOUT */
-
-
-
   /* MAIN CONTACT */
   .goformbutton{
   display: none;

@@ -89,7 +89,7 @@ body, html {
 }
 
 .hc {
-  transform: translateY(-3px);
+  transform: translateY(3px);
 }
 
 .main-header {
@@ -468,7 +468,6 @@ footer {
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
-  /* ABOUT */
   /* MAIN CONTACT */
   .goformbutton {
     display: none;
