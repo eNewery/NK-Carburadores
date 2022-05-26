@@ -228,8 +228,23 @@ body, html {
 }
 
 /* MAIN PRODUCTS */
+.navback a {
+  background-color: rgb(8, 8, 8);
+  border: 1px solid rgb(8, 8, 8);
+  padding: 5px;
+  transition: 1s;
+}
+.navback a:hover {
+  transition: 1s;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
 .cath-title {
-  transform: translateY(50px);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  transform: translateY(40px);
   padding: 7px;
 }
 
@@ -237,6 +252,7 @@ body, html {
   display: flex;
   flex-direction: column;
   padding: 16px;
+  gap: 50px;
 }
 
 .products-item {
@@ -247,6 +263,17 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.prod-row .card-pd button {
+  background-color: rgb(8, 8, 8);
+  border: 1px solid rgb(8, 8, 8);
+  padding: 5px;
+  transition: 1s;
+}
+.prod-row .card-pd button:hover {
+  transition: 1s;
+  cursor: pointer;
+  border: 1px solid white;
 }
 .prod-row .card-pd h2 {
   align-self: center;
@@ -351,7 +378,7 @@ footer {
 /* ACORDEON */
 /* MAIN CONTACT */
 #goup {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .goformbutton {
@@ -367,6 +394,7 @@ footer {
 }
 
 .main-contact {
+  height: 93%;
   width: 100%;
   display: flex;
   flex-direction: column;
