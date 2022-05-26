@@ -394,6 +394,21 @@ footer {
   padding: 10px;
 }
 
+/* PROD ROWS */
+.prod-cath {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.prod-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
   /* MAIN CONTACT */
