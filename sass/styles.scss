@@ -1,6 +1,5 @@
 /* IMPORT */
 @import "vrmx";
-@import "media";
 /* RESET CSS */
 *{
   text-align: center;
@@ -21,9 +20,10 @@ body, html{
 }
 /* NAV HEADER */
   .nav-products{
+    animation-name: appear-l;
+    animation-duration: 1s;
     background-color: rgb(8,8,8);
   ul{
-
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -51,12 +51,13 @@ transition: 1s;
   justify-content: space-between;
   align-items: center;
   background-color: black;
+  animation-name: appear-u;
+animation-duration: 0.5s;
 }
 
 .main-logo{
   font-size:32px;
   text-decoration:none;
-
   strong{
     transition: 1s;
     padding: 5px;
@@ -249,6 +250,8 @@ border:1px solid white;
     align-items: center;
 
     .right-products{
+      animation-name: appear-r;
+      animation-duration: 1s;
       display:flex;
       flex-direction: column;
       gap:50px;
