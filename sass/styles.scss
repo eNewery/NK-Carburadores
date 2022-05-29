@@ -63,6 +63,7 @@ animation-duration: 0.5s;
     padding: 5px;
     border-radius: 10px;
     color: $principal-layout;
+    margin:10px;
 &:hover{
 background-color: white;
 color:black;
@@ -129,6 +130,7 @@ transition: 1s;
 }
 
 .button-menu{
+  margin:10px;
   z-index: 200;
   width: 40px;
   height: 40px;
@@ -302,6 +304,9 @@ clear: both;
     padding: 15px;
     background-color: rgb(8,8,8);
     border-radius:10px;
+    h2{
+      margin:5px;
+    }
   p{
     font-size:12px;
   }

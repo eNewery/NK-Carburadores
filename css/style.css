@@ -109,6 +109,7 @@ body, html {
   padding: 5px;
   border-radius: 10px;
   color: white;
+  margin: 10px;
 }
 .main-logo strong:hover {
   background-color: white;
@@ -174,6 +175,7 @@ body, html {
 }
 
 .button-menu {
+  margin: 10px;
   z-index: 200;
   width: 40px;
   height: 40px;
@@ -349,6 +351,9 @@ footer {
   padding: 15px;
   background-color: rgb(8, 8, 8);
   border-radius: 10px;
+}
+.about .cards .card h2 {
+  margin: 5px;
 }
 .about .cards .card p {
   font-size: 12px;
