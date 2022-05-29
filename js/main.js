@@ -50,5 +50,12 @@ comprar3.onclick = erro;
 comprar4.onclick = erro;
 
 function erro() {
-  alert("¡Compra realizada con éxito!")
+  let nombre = prompt("¿Cuál es tu nombre?");
+  let residencia = prompt("¿De dónde eres?");
+  let postal = prompt("Introduce tu codigo postal")
+  let direccion = prompt("Introduce tu direccion con altura")
+  let edad = prompt("¿Qué edad tienes?");
+  let numero = prompt("Ingresa numero de teléfono con whatsapp");
+  alert("¿Los siguientes datos son correctos?" + " Nombre: " + nombre + " |" + " Residencia: " + residencia + " |" + " Código postal: " + postal + " |" + " Dirección: " + direccion + " |" + " Edad: " + edad + " |" + " Número: " + numero + " |" )
+alert("Entonces, su compra será enviada al domicilio solicitado en los próximos 7 días hábiles. Muchas gracias")
 };
