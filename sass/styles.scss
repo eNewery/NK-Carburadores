@@ -22,7 +22,6 @@ body, html{
   .nav-products{
     animation-name: appear-l;
     animation-duration: 1s;
-    background-color: rgb(8,8,8);
   ul{
   list-style: none;
   display: flex;
@@ -31,6 +30,7 @@ body, html{
     padding:10px;
 border:1px solid rgb(53, 53, 53);
 transition: 1s;
+margin-top:20px;
 &:hover{
   border:1px solid white;
   transition: 1s;
