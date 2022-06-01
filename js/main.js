@@ -56,6 +56,11 @@ function erro() {
   let direccion = prompt("Introduce tu direccion con altura")
   let edad = prompt("¿Qué edad tienes?");
   let numero = prompt("Ingresa numero de teléfono con whatsapp");
-  alert("¿Los siguientes datos son correctos?" + " Nombre: " + nombre + " |" + " Residencia: " + residencia + " |" + " Código postal: " + postal + " |" + " Dirección: " + direccion + " |" + " Edad: " + edad + " |" + " Número: " + numero + " |" )
+let respuesta = prompt("¿Los siguientes datos son correctos?" + " Nombre: " + nombre + " |" + " Residencia: " + residencia + " |" + " Código postal: " + postal + " |" + " Dirección: " + direccion + " |" + " Edad: " + edad + " |" + " Número: " + numero + " |" + "En caso que si, escriba en el siguiente recuadro 'Sí'")
+  if(respuesta === "Si"){
 alert("Entonces, su compra será enviada al domicilio solicitado en los próximos 7 días hábiles. Muchas gracias")
+}
+else{
+  alert("Disculpe, " + respuesta + " no es una respuesta correcta")
+}
 };
